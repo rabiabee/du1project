@@ -4,6 +4,13 @@
 
 body {
     padding: 5vw 1vw 3vw 1vw;
+
+    /*background image*/
+    background-image: url(images/th4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
