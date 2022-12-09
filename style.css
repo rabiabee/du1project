@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+}
+
+body {
+    padding: 5vw 1vw 3vw 1vw;
+}
+
+header {
+    font-family: Bungee Shade;
+    color: rgb(#217, 217, 217);
+}
