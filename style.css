@@ -11,9 +11,19 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    box-sizing: border-box;
 }
+
 
 header {
     font-family: Bungee Shade;
     color: rgb(#217, 217, 217);
+}
+
+.container {
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0px 30px;
 }
