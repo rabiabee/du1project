@@ -1,3 +1,4 @@
+/*<===========DU1 "Sidan" CSS===========>*/
 @font-face {
     font-family: "BungeeShade-Regular";
     src: url("Fonts/Bungee/BungeeShade-Regular.ttf");
@@ -8,6 +9,7 @@
     src: url("Fonts/Bungee/BungeeOutline-Regular.ttf")
 }
 
+/*<===========core web-page styles===========>*/
 * {
     margin: 0;
 }
@@ -48,7 +50,7 @@ article {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/*header + styles styles*/
+/*header styles*/
 header {
     font-family: Bungee Shade;
     color: rgb(217, 217, 217);
@@ -73,6 +75,8 @@ h1 {
     margin-bottom: 40px;
     font-size: calc(1.6 * var(--main_font_size));
 }
+
+.h2-snowpiercer {}
 
 /*navigation styles*/
 nav {
@@ -108,7 +112,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* all cover styles + hover */
+/* cover styles + hover */
 .song_list,
 .cover {
     grid-column: 2;
@@ -155,3 +159,82 @@ nav {
     grid-template-columns: 1.5fr 1fr;
     gap: 1vh;
 }
+
+/* song lists*/
+.song_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vh;
+}
+
+.songlist-1 {
+    background-color: #98736a;
+    color: #f7f4eb;
+    border-radius: 0 0 0 30px;
+    padding: 2vh;
+    font-size: calc(1 * var(--font-size));
+}
+
+.songlist-2 {
+    background-color: #98736a;
+    color: #f7f4eb;
+    border-radius: 0 0 30 0px;
+    padding: 2vh;
+    font-size: calc(1 * var(--font-size));
+}
+
+/*anecdote styles*/
+
+.top_right_90 {}
+
+.top_left_90 {}
+
+.pcw-director {}
+
+.two_wide_bottom_left_90 {}
+
+.anecdotes-the_handmaiden {}
+
+.bottom_right_90 {}
+
+/*touch up styles go here*/
+
+/*<===========Snowpiercer===========>*/
+
+#snowpiercer {}
+
+.song_list {}
+
+.songlist-3 {}
+
+.songlist-4 {}
+
+/* anecdote styles*/
+.top_right_90 {}
+
+.top_left_90 {}
+
+.pcw-director2 {
+    background-image: url(Images/th5.jpg);
+    background-position: right;
+    background-size: cover;
+    grid-column: 3;
+    font-weight: bold;
+    text-shadow: 0 0 0.5vh #000000;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+
+.two_wide_bottom_left_90 {}
+
+.anecdotes_snowpiercer {}
+
+.bottom_right_90 {}
+
+footer {}
+
+/*<===========Media Queries===========>*/
+/*tablet*/
+/*mobile*/
+/*responsive anecdotes*/
