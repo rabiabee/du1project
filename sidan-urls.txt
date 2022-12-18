@@ -1,0 +1,6 @@
+DU1 - Sidan.
+
+1. Länk till projektets repository 
+på Github: https://github.com/rabiabee/du1project 
+2. Adressen till sidan på webben (FTP): 
+https://wdu.maumt.se/ht22/top_lady/du1project/

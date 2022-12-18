@@ -10,11 +10,11 @@
 }
 
 @font-face {
-    font-family: Barlow_Condensed Condensed;
+    font-family: Barlow_Condensed;
     src: url(Fonts/Barlow_Condensed/BarlowCondensed-Black.ttf);
 }
 
-/*<===========web-page styles===========>*/
+/*<===========styles===========>*/
 * {
     margin: 0;
 }
@@ -26,8 +26,9 @@ body {
     color: rgba(199, 199, 199);
 
     /*background image*/
+    background-image: url("./images/desktop-background.jpg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
     box-sizing: border-box;
@@ -50,7 +51,7 @@ body {
 /*header styles*/
 header {
     font-family: BungeeShade-Regular;
-    font-size: calc(3.4*var(--font-size));
+    font-size: calc(2.6*var(--font-size));
     color: rgb(210, 205, 205);
     margin-bottom: -50px;
 }
@@ -58,21 +59,20 @@ header {
 .h1 {
     font-family: BungeeOutline-Regular;
     font-weight: bold;
-    font-size: calc(3*var(--font-size));
+    font-size: calc(2.3*var(--font-size));
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
 }
 
 .h2-the_handmaiden {
     color: #98736a;
-    margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: calc(1.8 * var(--font-size));
 }
 
 .h2_snowpiercer {
     color: #466365;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: calc(1.8 * var(--font-size));
 }
 
@@ -103,7 +103,6 @@ nav {
     margin-top: 55px;
     margin-bottom: 65px;
     text-align: center;
-    justify-self: center;
 }
 
 .navigation {
@@ -130,14 +129,15 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* cover styles + hover */
-.cover,
+
 .song_list {
     grid-column: 2;
 }
 
+/* !!!!!!!!!!!!!!!!! cover styles */
 .cover {
     position: relative;
+    grid-column: 2;
 }
 
 .cover img {
@@ -164,7 +164,7 @@ nav {
     border-radius: 30px 30px 0 0;
 }
 
-/* the handmaiden ost styles */
+/* the handmaiden styles */
 .album_data {
     grid-row: 1/3;
     margin-right: 1vh;
@@ -172,6 +172,7 @@ nav {
     color: rgb(217, 217, 217, 0.8);
 }
 
+/*main page grid for th*/
 #the_handmaiden {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -181,7 +182,7 @@ nav {
 /* song lists*/
 .songs {
     list-style: decimal;
-    margin-left: -1vh;
+    margin-left: -2.6vh;
 }
 
 .no_list {
@@ -199,7 +200,7 @@ nav {
     color: #f7f4eb;
     border-radius: 0 0 0 25px;
     padding: 2vh;
-    font-size: calc(1 * var(--font-size));
+    font-size: calc(0.9 * var(--font-size));
 }
 
 .songlist-2 {
@@ -207,10 +208,10 @@ nav {
     color: #f7f4eb;
     border-radius: 0 0 25px 0;
     padding: 2vh;
-    font-size: calc(1 * var(--font-size));
+    font-size: calc(0.9 * var(--font-size));
 }
 
-/*anecdote styles*/
+/* the handmaiden anecdote styles*/
 .anecdotes-the_handmaiden {
     padding: 0;
     list-style: none;
@@ -273,10 +274,9 @@ nav {
     padding: 2vh;
 }
 
-/*touch up styles go here*/
-
 /*<===========Snowpiercer===========>*/
 
+/*main page grid for th*/
 #snowpiercer {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -340,7 +340,7 @@ nav {
 }
 
 .pcw-director2 {
-    background-image: url(Images/th5.jpg);
+    background-image: url(images/th5.jpg);
     background-size: cover;
     grid-column: 3;
     display: flex;
@@ -363,50 +363,82 @@ footer {
     font-size: var(--font-size);
 }
 
-/*<========Media Queries> breakpoints for different devices ========>*/
+/*<========Media Queries========>*/
+/*breakpoints for different devices*/
 
-/*desktop*/
+/*<====desktop styles====>*/
 @media (min-width: 1111px) {
     body {
-        --font-size: 17px;
+        --font-size: 15.5333px;
+    }
+
+    .heading {
+        font-size: 80.8333px;
+    }
+
+    .anecdotes_snowpiercer,
+    .anecdotes-the_handmaiden {
+        font-size: 15.5333px;
     }
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (max-width: 900px) {
     body {
-        --font-size: 16px;
-        background: url('images/desktop-background.jpg') no-repeat center center fixed;
+        font-size: 12.5833px;
+        background: url("images/desktop-background.jpg") no-repeat center center fixed;
         background-size: cover;
     }
 
     .heading {
-        text-align: center;
-        font-size: 7vw;
+        font-size: 56px
     }
-
-    .album_data {
-        font-size: var(--font-size);
-    }
-
 }
 
-/*tablet*/
+/*<====tablet styles====>*/
 @media screen and (max-width: 800px) {
     body {
-        --font-size: 14px;
         margin: 0;
-        background: url('images/tablet-background.jpg') no-repeat center center fixed;
+        background: url("./images/tablet-background.jpg") no-repeat center center fixed;
         background-size: cover;
         padding: 0;
+        --font-size: 1.4vw;
+    }
+
+    .container {
+        margin-top: 10vh;
     }
 
     .heading {
-        font-size: 7vw;
         text-align: center;
+        font-size: calc(7*var(--font-size));
+        margin-bottom: 6vh;
+        padding-bottom: 2.8vh;
+        padding-top: 3vh;
+        line-height: 9vh;
+    }
+
+    nav {
+        margin-top: 0px;
+        margin-bottom: 6vh;
+    }
+
+    .navigation {
+        font-size: calc(2.2*var(--font-size));
+        padding: 0.7vh 2.2vw;
     }
 
     .h1 {
-        font-size: 5.5vw;
+        font-size: calc(5*var(--font-size));
+        line-height: 6vh;
+    }
+
+    .h2-the_handmaiden,
+    .h2_snowpiercer {
+        font-size: calc(3.5*var(--font-size))
+    }
+
+    .musicians {
+        font-size: calc(1.8*var(--font-size));
     }
 
     #the_handmaiden {
@@ -423,11 +455,10 @@ footer {
         grid-template-columns: 1.4fr 1fr;
     }
 
-    /*tablet the_handmaiden cover and song-lists positioning*/
+    /*tablet the_handmaiden cover + song-lists positioning*/
     .cover {
         grid-column: 1/2;
     }
-
 
     .cover img {
         border-radius: 25px 0 0 25px;
@@ -453,6 +484,7 @@ footer {
         grid-row: 2/3;
         grid-column: 1/3;
         margin-bottom: 7px;
+        font-size: calc(1.8*var(--font-size));
     }
 
     .song_list {
@@ -464,7 +496,6 @@ footer {
 
     .all_songs {
         padding-left: 2vw;
-        padding-bottom: -5vh;
     }
 
     .songlist-1,
@@ -474,7 +505,7 @@ footer {
 
     .song_list div,
     .anecdotes-the_handmaiden {
-        font-size: 2.1vw;
+        font-size: calc(1.5*var(--font-size))
     }
 
     /* the handmaiden anecdotes tablet */
@@ -511,7 +542,7 @@ footer {
 
     /* snowpiercer anecdotes tablet */
     .anecdotes_snowpiercer {
-        font-size: 1.8vw;
+        font-size: calc(1.5*var(--font-size));
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
@@ -537,19 +568,20 @@ footer {
     }
 
     footer {
-        font-size: 2.2vh
+        font-size: calc(1.4*var(--font-size));
     }
 
 }
 
-/*mobile*/
+/*<====mobile styles====>*/
 @media screen and (max-width: 500px) {
     body {
         /*background-image: url(/images/mobile-background.jpg);*/
-        background: url('images/mobile-background.jpg') no-repeat center center fixed;
+        background: url("./images/mobile-background.jpg") no-repeat center center fixed;
         background-size: cover;
         padding: 0;
         margin: 0;
+        --font-size: 1.4vw;
     }
 
     .container {
@@ -562,29 +594,54 @@ footer {
 
     .heading {
         text-align: center;
-        font-size: 7.7vw;
+        font-size: calc(7*var(--font-size));
+        margin-bottom: 6vh;
+        padding-bottom: 2.8vh;
+        line-height: 5.7vh;
     }
 
     .h1 {
-        font-size: 6vw;
+        font-size: calc(5*var(--font-size));
+        line-height: 4.5vh;
+    }
+
+    .h2-the_handmaiden,
+    .h2_snowpiercer {
+        font-size: calc(3.7*var(--font-size))
+    }
+
+    nav {
+        margin-top: 0px;
+        margin-bottom: 6vh;
     }
 
     .navigation {
-        font-size: calc(1.3*var(--font-size));
-        padding: 10px;
+        font-size: calc(2.2*var(--font-size));
+        padding: 0.7vh 2.2vw;
     }
 
-    .show_not_hover {
-        border-radius: 25px 25px 0 0;
-    }
 
     .cover {
         grid-column: 1/3;
     }
 
+    .cover img {
+        border-radius: 25px 25px 0 0;
+    }
+
+    #snowpiercer>.cover {
+        grid-column: 1/3;
+        margin-bottom: 0.4vh;
+        /*^^positioning mobile^^!*/
+    }
+
+    .musicians {
+        font-size: calc(2.2*var(--font-size));
+    }
+
     .album_data {
         grid-row: 3/4;
-        font-size: 3vw;
+        font-size: calc(2.2*var(--font-size));
     }
 
     .song_list {
@@ -592,7 +649,7 @@ footer {
         grid-column: 1/3;
         grid-row: 2/3;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .songlist-1,
@@ -600,16 +657,15 @@ footer {
         border-radius: 0 0 0 25px;
     }
 
-    .song_list div,
-    .anecdotes-the_handmaiden {
-        font-size: 2.1vw;
+    .song_list div {
+        font-size: calc(2*var(--font-size))
     }
 
     /* the handmaiden anecdotes mobile */
     .anecdotes-the_handmaiden {
-        font-size: 2.3vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        font-size: calc(2.1*var(--font-size));
     }
 
     .two_wide_bottom_left_90 {
@@ -618,8 +674,8 @@ footer {
 
     /* snowpiercer anecdotes mobile */
     .anecdotes_snowpiercer {
+        font-size: calc(2.1*var(--font-size));
         display: grid;
-        font-size: 2.1vh;
         grid-template-columns: 2fr 1fr;
     }
 
@@ -641,7 +697,6 @@ footer {
     }
 
     footer {
-        font-size: 2.2vh;
+        font-size: calc(1.9*var(--font-size));
     }
-
 }
